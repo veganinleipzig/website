@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>vegan-in-leipzig.de</title>
-    <link href="http://www.vegan-in-leipzig.de/feed.xml" rel="self" />
-    <link href="http://www.vegan-in-leipzig.de" />
-    <updated>2019-10-30T02:32:59+01:00</updated>
+    <link href="https://www.vegan-in-leipzig.de/feed.xml" rel="self" />
+    <link href="https://www.vegan-in-leipzig.de" />
+    <updated>2019-10-30T04:14:52+01:00</updated>
     <author>
         <name>Christo</name>
     </author>
-    <id>http://www.vegan-in-leipzig.de</id>
+    <id>https://www.vegan-in-leipzig.de</id>
 
     <entry>
         <title>Testpost</title>
         <author>
             <name>Christo</name>
         </author>
-        <link href="http://www.vegan-in-leipzig.de/testpost.html"/>
-        <id>http://www.vegan-in-leipzig.de/testpost.html</id>
+        <link href="https://www.vegan-in-leipzig.de/testpost.html"/>
+        <id>https://www.vegan-in-leipzig.de/testpost.html</id>
 
         <updated>2019-10-30T02:32:10+01:00</updated>
             <summary>
