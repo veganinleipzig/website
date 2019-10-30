@@ -12,7 +12,7 @@
         {
             "id": "https://www.vegan-in-leipzig.de/testpost.html",
             "url": "https://www.vegan-in-leipzig.de/testpost.html",
-            "title": "Testpost",
+            "title": "Under Construction",
             "summary": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod&hellip;",
             "content_html": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Foobar",
             "author": {
@@ -21,7 +21,7 @@
             "tags": [
             ],
             "date_published": "2019-10-30T01:53:05+01:00",
-            "date_modified": "2019-10-30T02:32:10+01:00"
+            "date_modified": "2019-10-30T16:07:55+01:00"
         }
     ]
 }
