@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>vegan-in-leipzig.de</title>
+    <link href="http://www.vegan-in-leipzig.de/feed.xml" rel="self" />
+    <link href="http://www.vegan-in-leipzig.de" />
+    <updated>2019-10-30T02:28:13+01:00</updated>
+    <author>
+        <name>Christo</name>
+    </author>
+    <id>http://www.vegan-in-leipzig.de</id>
+
+    <entry>
+        <title>Testpost</title>
+        <author>
+            <name>Christo</name>
+        </author>
+        <link href="http://www.vegan-in-leipzig.de/testpost.html"/>
+        <id>http://www.vegan-in-leipzig.de/testpost.html</id>
+
+        <updated>2019-10-30T02:25:28+01:00</updated>
+            <summary>
+                <![CDATA[
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            ]]>
+        </content>
+    </entry>
+</feed>

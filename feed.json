@@ -1,0 +1,27 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "vegan-in-leipzig.de",
+    "description": "",
+    "home_page_url": "http://www.vegan-in-leipzig.de",
+    "feed_url": "http://www.vegan-in-leipzig.de/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "Christo"
+    },
+    "items": [
+        {
+            "id": "http://www.vegan-in-leipzig.de/testpost.html",
+            "url": "http://www.vegan-in-leipzig.de/testpost.html",
+            "title": "Testpost",
+            "summary": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod&hellip;",
+            "content_html": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "author": {
+                "name": "Christo"
+            },
+            "tags": [
+            ],
+            "date_published": "2019-10-30T01:53:05+01:00",
+            "date_modified": "2019-10-30T02:25:28+01:00"
+        }
+    ]
+}
