@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -eu
+
+echo "Running local CI checks before commit..."
+npm run check:ci

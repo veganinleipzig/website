@@ -1,0 +1,106 @@
+---
+layout: layouts/base.njk
+---
+<section id="page-top" class="poster-page">
+  <div class="poster-frame">
+    <header class="poster-hero">
+      <h1 class="poster-title{% if intro.logo %} poster-title--logo{% endif %}">
+        {% if intro.logo %}
+        <picture class="poster-title__picture">
+          <source media="(min-width: 880px)" srcset="{{ intro.logo.wide | url }}" />
+          <img class="poster-title__image" src="{{ intro.logo.narrow | url }}" alt="{{ intro.logo.alt }}" />
+        </picture>
+        {% else %}
+        {{ intro.title | cmsInline | safe }}
+        {% endif %}
+      </h1>
+      <div class="poster-copy">
+        <div class="poster-copy__ornament poster-copy__ornament--left" aria-hidden="true">
+          <img src="{{ '/images/decor/crosses.png' | url }}" alt="" />
+        </div>
+        <div class="poster-copy__ornament poster-copy__ornament--right" aria-hidden="true">
+          <img src="{{ '/images/decor/circles.png' | url }}" alt="" />
+        </div>
+        {% for paragraph in intro.paragraphs %}
+        <p>{{ paragraph | cmsInline | safe }}</p>
+        {% endfor %}
+      </div>
+    </header>
+
+    <section id="folge-uns-hier" class="poster-panel poster-panel--follow" aria-labelledby="follow-title">
+      <div class="poster-panel__star" aria-hidden="true">
+        <img class="poster-panel__star-image poster-panel__star-image--large" src="{{ '/images/decor/star.png' | url }}" alt="" />
+        <img class="poster-panel__star-image poster-panel__star-image--small" src="{{ '/images/decor/star.png' | url }}" alt="" />
+      </div>
+      <h2 id="follow-title" class="poster-panel__title poster-panel__title--mint">Folge uns hier</h2>
+      <div class="follow-grid">
+        {% for action in intro.actions %}
+        <a class="follow-card" href="{{ action.href }}" {% if action.external %}target="_blank" rel="noopener noreferrer"{% endif %} aria-label="{{ action.label }}">
+          {% if action.label == "Instagram" %}
+          <svg class="follow-card__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95Zm8.95 1.35a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 6.85A5.15 5.15 0 1 1 6.85 12 5.16 5.16 0 0 1 12 6.85Zm0 1.8A3.35 3.35 0 1 0 15.35 12 3.35 3.35 0 0 0 12 8.65Z"></path>
+          </svg>
+          {% elseif action.label == "Telegram" %}
+          <svg class="follow-card__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M21.25 4.1 18.1 18.96c-.24 1.05-.88 1.31-1.78.82l-4.93-3.63-2.38 2.29c-.26.26-.49.49-.99.49l.36-5.05 9.2-8.31c.4-.35-.09-.55-.62-.2L5.58 12.53l-4.9-1.53c-1.07-.33-1.09-1.07.22-1.58L19.95 2.1c.88-.33 1.64.2 1.3 2Z"></path>
+          </svg>
+          {% endif %}
+          <span>{{ action.label | cmsInline | safe }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="initiativen-in-leipzig" class="poster-panel" aria-labelledby="groups-title">
+      <h2 id="groups-title" class="poster-panel__title poster-panel__title--gold">Initiativen in Leipzig</h2>
+      <p class="poster-note">{{ veganAktiv.intro | cmsInline | safe }}</p>
+
+      <div class="initiative-grid">
+        {% for item in veganAktiv.items %}
+        {% set cardHref = item.website.href if item.website and item.website.href else '#initiativen-in-leipzig' %}
+        {% set isExternal = item.website and item.website.external %}
+        <article class="initiative-card initiative-card--{% if item.thumbnail %}logo{% else %}illustrated{% endif %}">
+          <a class="initiative-card__link" href="{{ cardHref }}" {% if isExternal %}target="_blank" rel="noopener noreferrer"{% endif %} aria-label="{{ item.name }}">
+            <div class="initiative-card__media" aria-hidden="true">
+              {% if item.thumbnail %}
+              <img class="initiative-card__thumb" src="{{ item.thumbnail | url }}" alt="" />
+              {% else %}
+              <div class="initiative-card__illustration">
+                <span class="initiative-card__cloud initiative-card__cloud--one"></span>
+                <span class="initiative-card__cloud initiative-card__cloud--two"></span>
+                <span class="initiative-card__hill initiative-card__hill--back"></span>
+                <span class="initiative-card__hill initiative-card__hill--front"></span>
+              </div>
+              {% endif %}
+            </div>
+            <div class="initiative-card__name">
+              <span>{{ item.name | cmsInline | safe }}</span>
+            </div>
+          </a>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="impressum" class="poster-legal" aria-labelledby="legal-title">
+      <div class="poster-legal__layout">
+        <h2 id="legal-title" class="poster-legal__title">{{ legal.title | cmsInline | safe }}</h2>
+        {% for section in legal.sections %}
+        <section class="poster-legal__column poster-legal__column--slot-{{ loop.index }}" aria-labelledby="legal-section-{{ loop.index }}">
+          <h3 id="legal-section-{{ loop.index }}" class="poster-legal__heading">{{ section.title | cmsInline | safe }}</h3>
+          {% for paragraph in section.paragraphs %}
+          <p>{{ paragraph | cmsInline | safe }}</p>
+          {% endfor %}
+        </section>
+        {% endfor %}
+        <div class="poster-legal__column poster-legal__column--backtotop">
+          <a class="poster-back-to-top" href="#page-top" aria-label="Zum Seitenanfang">
+            <svg class="poster-back-to-top__icon" viewBox="0 0 40 56" aria-hidden="true" focusable="false">
+              <path d="M20 1 L39 25 H27 V52 H13 V25 H1 Z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>

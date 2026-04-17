@@ -1,0 +1,46 @@
+{
+  "name": "vegan-in-leipzig",
+  "version": "1.0.0",
+  "description": "Static Eleventy site for Vegan in Leipzig.",
+  "scripts": {
+    "start": "npm run dev",
+    "test": "npm run test:e2e",
+    "clean": "rimraf ${ELEVENTY_OUTPUT_DIR:-output/site}",
+    "eleventy": "npx eleventy",
+    "eleventy:watch": "npx eleventy --watch",
+    "styles:dev": "sass ./src/assets/sass/main.scss:${ELEVENTY_OUTPUT_DIR:-output/site}/assets/css/main.css --source-map && postcss ${ELEVENTY_OUTPUT_DIR:-output/site}/assets/css/main.css --replace",
+    "styles:prod": "sass ./src/assets/sass/main.scss:${ELEVENTY_OUTPUT_DIR:-output/site}/assets/css/main.css --style compressed --no-source-map && postcss ${ELEVENTY_OUTPUT_DIR:-output/site}/assets/css/main.css --replace",
+    "serve": "light-server -c .lightserverrc",
+    "dev": "ELEVENTY_OUTPUT_DIR=output/site run-s clean styles:dev eleventy && ELEVENTY_OUTPUT_DIR=output/site run-p eleventy:watch serve",
+    "build": "ELEVENTY_OUTPUT_DIR=output/site run-s clean styles:prod eleventy",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "check:ci": "npm run format:check && npm run build && npm run test:e2e",
+    "hooks:install": "git config core.hooksPath .githooks",
+    "test:e2e": "playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veganinleipzig/website.git"
+  },
+  "author": "",
+  "license": "0BSD",
+  "bugs": {
+    "url": "https://github.com/veganinleipzig/website/issues"
+  },
+  "homepage": "https://vegan-in-leipzig.de/",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.5",
+    "@axe-core/playwright": "^4.11.1",
+    "@playwright/test": "^1.58.2",
+    "autoprefixer": "^10.4.27",
+    "cssnano": "^7.1.3",
+    "light-server": "2.9.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.8",
+    "postcss-cli": "^11.0.1",
+    "prettier": "^3.8.1",
+    "rimraf": "6.1.3",
+    "sass": "^1.98.0"
+  }
+}

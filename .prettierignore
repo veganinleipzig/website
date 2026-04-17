@@ -1,0 +1,13 @@
+output/
+node_modules/
+.playwright-cli/
+playwright-report/
+playwright-report-production-smoke/
+test-results/
+.agents/
+*.png
+*.jpg
+*.webp
+*.woff*
+*.ttf
+*.eot

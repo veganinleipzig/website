@@ -1,0 +1,30 @@
+# Dependency directories
+node_modules/
+
+# Build outputs
+output/
+src/_site/
+tmp/
+
+# Local logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dotenv environment variables file
+.env
+
+# macOS
+.DS_Store
+
+# Playwright outputs
+.playwright-cli/
+playwright-report/
+playwright-report-production-smoke/
+test-results/
+
+# local agent tooling
+.agents/
+skills-lock.json

@@ -1,0 +1,107 @@
+settings:
+  hide: true
+  content:
+    merge: true
+
+media:
+  input: src/images
+  output: /images
+
+content:
+  - name: site
+    label: Site Content
+    type: file
+    path: src/index.11tydata.json
+    format: json
+    fields:
+      - name: title
+        label: Browser Title
+        type: string
+      - name: siteName
+        label: Site Name
+        type: string
+      - name: intro
+        label: Intro
+        type: object
+        fields:
+          - name: logo
+            label: Intro Logo
+            type: object
+            fields:
+              - name: wide
+                label: Wide Logo
+                type: image
+              - name: narrow
+                label: Narrow Logo
+                type: image
+              - name: alt
+                label: Logo Alt Text
+                type: string
+          - name: title
+            label: Headline
+            type: string
+          - name: paragraphs
+            label: Intro Paragraphs
+            type: text
+            list: true
+          - name: actions
+            label: Follow Links
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: Label
+                type: string
+              - name: href
+                label: URL
+                type: string
+              - name: external
+                label: External Link
+                type: boolean
+      - name: veganAktiv
+        label: Initiativen
+        type: object
+        fields:
+          - name: intro
+            label: Intro Text
+            type: text
+          - name: items
+            label: Groups
+            type: object
+            list: true
+            fields:
+              - name: name
+                label: Name
+                type: string
+              - name: thumbnail
+                label: Thumbnail
+                type: image
+              - name: website
+                label: Link
+                type: object
+                fields:
+                  - name: href
+                    label: URL
+                    type: string
+                  - name: external
+                    label: External Link
+                    type: boolean
+      - name: legal
+        label: Legal
+        type: object
+        fields:
+          - name: title
+            label: Section Title
+            type: string
+          - name: sections
+            label: Legal Sections
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: Title
+                type: string
+              - name: paragraphs
+                label: Paragraphs
+                type: text
+                list: true

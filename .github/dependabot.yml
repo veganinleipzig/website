@@ -1,0 +1,23 @@
+# manual-refresh: 2026-03-25T01:47:09Z (manual workflow_dispatch)
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    ignore:
+      - dependency-name: "sass"
+        update-types:
+          - "version-update:semver-major"
+    groups:
+      all-npm-dependencies:
+        patterns:
+          - "*"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    groups:
+      all-github-actions-dependencies:
+        patterns:
+          - "*"

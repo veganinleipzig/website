@@ -1,0 +1,122 @@
+{
+  "title": "Vegan in Leipzig",
+  "siteName": "Vegan in Leipzig",
+  "intro": {
+    "title": "Vegan in Leipzig",
+    "logo": {
+      "wide": "/images/logo_wide.png",
+      "narrow": "/images/logo_narrow.png",
+      "alt": "vegan-in-leipzig"
+    },
+    "paragraphs": [
+      "**Vegan in Leipzig** ist ein nichtkommerzielles Kooperationsprojekt Leipziger Tierrechtsgruppen und keine eigenständige Organisation.",
+      "Als gemeinsamer Informationskanal bietet das Projekt interessierten Menschen einen **zentralen Anlaufpunkt für ehrenamtliche Tierrechtsarbeit** in Leipzig."
+    ],
+    "actions": [
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com/veganinleipzig/",
+        "external": true
+      },
+      {
+        "label": "Telegram",
+        "href": "https://t.me/veganinleipzig",
+        "external": true
+      }
+    ]
+  },
+  "veganAktiv": {
+    "intro": "Die hier aufgeführten Gruppen sind in Leipzig aktiv, haben aber jeweils eigene Schwerpunkte und arbeiten mitunter zusammen. Wenn du dich bei ihnen engagieren möchtest, kontaktiere sie bitte direkt über die verlinkten Seiten.",
+    "items": [
+      {
+        "name": "ProVeg Leipzig",
+        "thumbnail": "/images/groups/proveg.jpg",
+        "website": {
+          "href": "https://www.instagram.com/provegleipzig/",
+          "external": true
+        }
+      },
+      {
+        "name": "Pro Lebensglück e.V.",
+        "thumbnail": "/images/groups/prolebensglueck.webp",
+        "website": {
+          "href": "https://prolebensglueckev.wordpress.com/",
+          "external": true
+        }
+      },
+      {
+        "name": "Tierbefreier*innen Leipzig",
+        "thumbnail": "/images/groups/tierbefreierinnen.png",
+        "website": {
+          "href": "https://www.instagram.com/tierbefreierinnen.leipzig/",
+          "external": true
+        }
+      },
+      {
+        "name": "Animal Rebellion Leipzig",
+        "thumbnail": "/images/groups/animalrebellionleipzig.jpg",
+        "website": {
+          "href": "https://www.instagram.com/animalrebellionleipzig/",
+          "external": true
+        }
+      },
+      {
+        "name": "Animal Liberation Leipzig",
+        "thumbnail": "/images/groups/animalliberationleipzig.jpg",
+        "website": {
+          "href": "https://www.instagram.com/animalliberationleipzig/",
+          "external": true
+        }
+      },
+      {
+        "name": "ARIWA Leipzig",
+        "thumbnail": "/images/groups/ariwaleipzig.jpg",
+        "website": {
+          "href": "https://www.instagram.com/ariwa.leipzig/",
+          "external": true
+        }
+      },
+      {
+        "name": "Tierrechtskongress Leipzig",
+        "thumbnail": "/images/groups/tierrechtskongressleipzig.jpg",
+        "website": {
+          "href": "https://tierrechtskongress.org/",
+          "external": true
+        }
+      },
+      {
+        "name": "Plant-Based Universities Leipzig",
+        "thumbnail": "/images/groups/PBUleipzig.jpg",
+        "website": {
+          "href": "https://linktr.ee/pbuleipzig",
+          "external": true
+        }
+      },
+      {
+        "name": "Albert Schweitzer Stiftung OG Leipzig",
+        "thumbnail": "/images/groups/abertschweizerstiftung.svg",
+        "website": {
+          "href": "https://albert-schweitzer-stiftung.de/helfen/aktiv/aktionsgruppen/leipzig",
+          "external": true
+        }
+      }
+    ]
+  },
+  "legal": {
+    "title": "Impressum",
+    "sections": [
+      {
+        "title": "Inhaltsverantwortlich",
+        "paragraphs": ["Angaben gemäß § 5 DDG", "Marie Böhme", "Lutherstr. 15", "04315 Leipzig", "Deutschland"]
+      },
+      {
+        "title": "Kontakt",
+        "paragraphs": [
+          "Telefon: +49 (0)156 79796840",
+          "E-Mail: veganinleipzig [at] systemli [punkt] org",
+          "GitHub: <a href=\"https://github.com/veganinleipzig/website\" target=\"_blank\" rel=\"noopener noreferrer\">veganinleipzig/website</a>"
+        ]
+      }
+    ]
+  }
+}

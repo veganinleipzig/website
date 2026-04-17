@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ locale or 'de' }}">
+  <head>
+    <title>{% if title and siteName and title != siteName %}{{ title }} | {{ siteName }}{% else %}{{ siteName or title }}{% endif %}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% if intro and intro.logo and intro.logo.narrow %}<link rel="icon" href="{{ intro.logo.narrow | url }}" />{% endif %}
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}" />
+  </head>
+  <body>
+    <main id="main">
+      {{ content | safe }}
+    </main>
+  </body>
+</html>

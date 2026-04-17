@@ -1,0 +1,68 @@
+name: Dependabot Refresh
+
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Optional note for the refresh commit"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out default branch
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Configure git author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Update Dependabot refresh marker
+        env:
+          REFRESH_REASON: ${{ inputs.reason }}
+        run: |
+          set -euo pipefail
+
+          stamp="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          note="${REFRESH_REASON:-manual workflow_dispatch}"
+          marker="# manual-refresh:"
+          tmp_file="$(mktemp)"
+
+          awk -v marker="$marker" -v stamp="$stamp" -v note="$note" '
+            BEGIN { updated = 0 }
+            index($0, marker) == 1 {
+              print marker " " stamp " (" note ")"
+              updated = 1
+              next
+            }
+            { print }
+            END {
+              if (!updated) {
+                print marker " " stamp " (" note ")"
+              }
+            }
+          ' .github/dependabot.yml > "$tmp_file"
+
+          mv "$tmp_file" .github/dependabot.yml
+
+      - name: Commit refresh marker
+        run: |
+          set -euo pipefail
+
+          if git diff --quiet -- .github/dependabot.yml; then
+            echo "No Dependabot changes to commit."
+            exit 0
+          fi
+
+          git add .github/dependabot.yml
+          git commit -m "Trigger Dependabot refresh"
+          git push origin HEAD:${{ github.event.repository.default_branch }}
