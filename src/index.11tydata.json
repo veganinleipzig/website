@@ -93,11 +93,11 @@
         }
       },
       {
-        "name": "Albert Schweitzer Stiftung OG Leipzig",
-        "thumbnail": "/images/groups/abertschweizerstiftung.svg",
+        "name": "CARE Kollektiv",
+        "thumbnail": "/images/groups/care-kollektiv-wip.svg",
         "website": {
-          "href": "https://albert-schweitzer-stiftung.de/helfen/aktiv/aktionsgruppen/leipzig",
-          "external": true
+          "href": "#",
+          "external": false
         }
       }
     ]

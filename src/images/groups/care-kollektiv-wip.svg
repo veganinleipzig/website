@@ -1,0 +1,9 @@
+<svg width="320" height="200" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="200" fill="#FBFBF7" />
+  <text x="36" y="106" fill="#111111" font-family="'Archivo Narrow', 'Oswald', sans-serif" font-size="72" font-weight="700" letter-spacing="1.44">CARE</text>
+  <text x="38" y="142" fill="#111111" font-family="'IBM Plex Sans', sans-serif" font-size="28" font-weight="600" letter-spacing="2.8">KOLLEKTIV</text>
+  <g transform="translate(214 54) rotate(-7)">
+    <rect width="72" height="34" rx="8" fill="#F3C64F" stroke="#111111" stroke-width="3" />
+    <text x="36" y="22" text-anchor="middle" fill="#111111" font-family="'IBM Plex Sans', sans-serif" font-size="18" font-weight="700" letter-spacing="1.8">WIP</text>
+  </g>
+</svg>
